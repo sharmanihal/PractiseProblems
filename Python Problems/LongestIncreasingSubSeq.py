@@ -9,7 +9,6 @@ class Solution:
         nums1= [*set(nums1)]
         nums1.sort()
         return self.solve(nums,nums1)
-        bisect_left
     def solve(self,x,y):
         arr=[[-1 for i in range(len(y)+1)]for j in range(len(x)+1)]
         for j in range(len(y)+1):
