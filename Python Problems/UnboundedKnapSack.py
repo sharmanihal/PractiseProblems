@@ -2,6 +2,7 @@ from typing import List
 
 
 class Solution:
+    
     def unbounded(self,wt:List[int],val:List[int],capacity,n):
         if capacity<=0 or n<=0:
             return 0
