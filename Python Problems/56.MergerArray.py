@@ -16,7 +16,7 @@ class Solution:
                 n=n-1
             else:
                 i=i+1
-        return (intervals)
+        return intervals
 
 ans= Solution()
 print(ans.merge( [[2,3],[4,5],[6,7],[8,9],[1,10]]))
