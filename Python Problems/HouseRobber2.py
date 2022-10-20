@@ -6,7 +6,7 @@ class Solution:
         memo1=[-1 for i in range(len(nums)-1)]
         memo2=[-1 for i in range(len(nums)-1)]
         res1= self.solve(nums[0:len(nums)-1],len(nums)-2,memo1)
-        res2= self.solve(nums[1:],len(nums)-2,memo2)
+        res2= self.solve(nums[1     :],len(nums)-2,memo2)
         return max(res1,res2)
     def solve(self,nums,n,memo):
         if n<0:
