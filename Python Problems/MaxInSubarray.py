@@ -1,16 +1,22 @@
 import sys
+from typing import List
 
 
+#Kadane's Algoritm
 class Solution:
-    def max(self,arr):
-        if len(arr)==2:
-            return max(arr[0]*arr[1], arr[1], arr[0])
-        return self.solve(arr,1)
-    def solve(self,arr,product):
-        if len(arr)==0:
-            return product
-        res1= self.solve(arr[0:len(arr)-1],product*arr[len(arr)-1])
-        res2= self.solve(arr[0:len(arr)-1],arr[len(arr)-1])
-        return max (res1,res2)
+    def maxProduct(self, arr: List[int]) -> int:
+        res=max(arr)
+        currMax=1
+        currMin=1
+        for n in arr:
+            if n==0:
+                currMax=1
+                currMin=1
+                continue
+            temp=currMax
+            currMax=max(n*currMax,n*currMin,n)
+            currMin=min(n*temp,n*currMin,n)
+            res=max(res,currMax)
+        return res
 ans= Solution()
 print(ans.max( [3,-1,4]))
