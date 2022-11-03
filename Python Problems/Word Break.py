@@ -15,5 +15,4 @@ class Solution:
         return d[-1]
 
 ans= Solution()
-print(ans.wordBreak("cars"
-,["car","ca","rs"]))
+print(ans.wordBreak("cars",["car","ca","rs"]))
