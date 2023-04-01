@@ -37,5 +37,5 @@ const mar=(arr,n)=>{
     }
     return right.reverse()
 }
-console.log(rainWaterTrapping([3,0,5,2,0,4],6))
+console.log(rainWaterTrapping([1,8,6,2,5,4,8,3,7],9))
 
