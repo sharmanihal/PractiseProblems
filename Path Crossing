@@ -1,0 +1,18 @@
+class Solution:
+    def isPathCrossing(self, path: str) -> bool:
+        x,y=0,0
+        hashset={(0,0)}
+        for i in path:
+            if i == 'N':
+                x+=1
+            elif i=='E':
+                y+=1
+            elif i=='S':
+                x-=1
+            elif i=='W':
+                y-=1
+            if (x,y) in hashset:
+                return True
+            else:
+                hashset.add((x,y))
+        return False
